@@ -1,0 +1,23 @@
+version = 'dev'
+
+buildscript {
+  ext { springBootVersion = '1.3.3.RELEASE' }
+  repositories { mavenCentral() }
+  dependencies { classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}") }
+}
+
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'spring-boot'
+
+jar { baseName = 'spring-boot-ssl' }
+
+targetCompatibility = sourceCompatibility = 1.8
+
+repositories { mavenCentral() }
+
+dependencies {
+  compile('org.projectlombok:lombok:1.16.6')
+  compile('org.springframework.boot:spring-boot-starter-mustache')
+  testCompile('org.springframework.boot:spring-boot-starter-test')
+}

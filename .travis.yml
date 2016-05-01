@@ -1,0 +1,10 @@
+language: java
+jdk: oraclejdk8
+script: gradle clean build
+cache:
+  directories:
+    - .gradle
+    - gradle
+    - $HOME/.gradle
+notifications:
+  on_success: never
