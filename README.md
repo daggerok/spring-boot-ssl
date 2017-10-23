@@ -1,7 +1,7 @@
 spring-boot-ssl [![build](https://travis-ci.org/daggerok/spring-boot-ssl.svg?branch=master)](https://travis-ci.org/daggerok/spring-boot-ssl)
 ===============
 
-spring boot https
+This project contains simple spring-boot https example
 
 ```sh
 git clone ... && cd $_
