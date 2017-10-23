@@ -2,6 +2,6 @@
 .gradle/
 .idea/
 build/
-gradle/
-gradlew*
-spring-boot-ssl.i*
+.iml
+.ipr
+.iws
