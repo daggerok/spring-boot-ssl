@@ -1,0 +1,17 @@
+version: "2.1"
+
+services:
+
+  app:
+    build: .
+    image: 127.0.0.1:5000/app
+    ports: ["443:8443"]
+    volumes: ["app-data:/home/app"]
+    networks: [backing-services]
+
+volumes:
+  app-data: {}
+
+networks:
+  backing-services:
+    driver: bridge

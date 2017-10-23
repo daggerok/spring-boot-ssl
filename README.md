@@ -4,8 +4,7 @@ spring-boot-ssl [![build](https://travis-ci.org/daggerok/spring-boot-ssl.svg?bra
 This project contains simple spring-boot https example
 
 ```sh
-git clone ... && cd $_
-gradle bootRun
+gradle build bootRun
 open https://localhost:8443/
 ```
 
@@ -13,6 +12,23 @@ using curl:
 
 ```sh
 curl -k https://localhost:8443
+```
+
+using docker
+
+```bash
+docker build -t app .
+docker run --rm -d -p 443:8443 --name=app app 
+curl -k https://localhost/health
+docker rm -f -v app
+```
+
+using docker-compose
+
+```bash
+docker-compose up --build -d 
+curl -k https://localhost/health
+docker-compose down -v
 ```
 
 not worked shit...
